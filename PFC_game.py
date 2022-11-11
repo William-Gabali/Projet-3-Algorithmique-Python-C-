@@ -1,4 +1,4 @@
-
+#DEBUT
 # definit la fonction random qui genere un nombre entre 1 et 3 
 # definit la fonction input qui récupère les entrés joueur 
 # inisialise la vaviable MenuDuJeux qui prend comme parametre" Mode Classique, Mode VS, ou Regle "
@@ -155,4 +155,4 @@
     # attendre 3 seconde d'intervale
     # #retour vers la fonction JMenus,
 
-
+#FIN

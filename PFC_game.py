@@ -2,7 +2,7 @@
 # definit la fonction random qui genere un nombre entre 1 et 3 
 # definit la fonction input qui récupère les entrés joueur 
 # inisialise la vaviable MenuDuJeux qui prend comme parametre" Mode Classique, Mode VS, ou Regle "
-#
+
 # assigner Mode Classique a la valeur 1
 # assigner Mode VS a la valeur 2
 # assigner Regle a la valeur 3
@@ -87,9 +87,8 @@
             # Afficher message :  "choisiser entre : (1)Pierre (2)Feille ou (3)Cisseaux."
     # attendre 3 seconde d'intervale
     # retour vers la fonction JMenus 
-# ,
 
-
+    
 # definir la fonction Jpartie avec les paramètre Jzero et ChoixVS
 # assigner a la variable Jun le retour de l'éxécution de la fonction input avec les paramètre (Pierre, Feille, et Cisseaux)
 # assigner a la variable Jdeux le retour de l'éxécution de la fonction input avec les paramètre (Pierre, Feille, et Cisseaux)
@@ -136,9 +135,7 @@
             # Alors affiche message d'erreur "une erreur est aparue veiliez réessayer !"
             # Afficher message :  "choisiser entre : (1)Pierre (2)Feille ou (3)Cisseaux."
     # attendre 3 seconde d'intervale
-    # retour vers la fonction JMenus,
-
-
+    # retour vers la fonction JMenus
 
 
 # definir fonction JRegle avec comme paramètre Jzero et ChoixRegle
@@ -153,6 +150,6 @@
     # attendre 5 seconde d'intervale
     # si tu a compris les regles alors bon jeux a toi !"
     # attendre 3 seconde d'intervale
-    # #retour vers la fonction JMenus,
+    # #retour vers la fonction JMenus
 
 #FIN

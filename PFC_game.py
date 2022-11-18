@@ -1,85 +1,54 @@
-# definit la fonction random qui genere une variable aleatoire pour l'IA
+from random import randint
 
-# Crée un Tableau avec des options 
+#Tableau des options 
+Jia  = ["pierre", "papier", "ciseaux"]
 
-# Attribuer une option aléatoire à l'IA
+# option aléatoire à l'IA
+Bots = Jia[randint(0,2)]
 
-# affiché les points du Joueur 1
+# les points du Joueur 1
+Pointsjun = 0
+# les points de l'IA
+PointsBots = 0
 
-# affiché les points de l'IA
-
-# Assignez continuer a Vrai
-
-# La boucle continue jusqu'à ce que la variable continuer est fausse
-
-    # affiche le message "Vous Choisisez :"
-    
-    # assigner jun aux retour de la fonction input qui va retourné le message :
-    # pierre, papier, ciseaux? ou tapez FIN pour arrêter le jeu!\n"
-    
-    # Si Jun est egale a FIN
-    
-        # Alors Continuer est egale a Faux et met fin a la partie 
-        
-    # Sinon SI Jun est egale a Bots
-    
-        #Alors
-        
-    #Sinon SI Jun est egale a pierre
-    
-        #SI Bots est egale a papier
-        
-            #Alors affiché le message "Tu a Perdu!", Bots, "recouvre", jun
-        
-            #Atribuer 1 point a l'IA
-        
-        #Sinon 
-        
-            #Alors affiché le message "Tu a Gagné!", jun, "écrase", Bots
-        
-            #Atribuer 1 point au joueurs 
-    
-    #Sinon SI jun est egale a papier
-    
-        #SI Bots est egale a ciseaux 
-    
-            #Alors Aficher le message "Perdu!", Bots, "coupe", jun
-    
-            #Atribuer 1 point a l'IA
-    
-        #Sinon
-    
-            #Alors afficher le message "Tu a Gagné!", jun, "recouvre", Bots
-    
-            #Atribuer 1 point au joueurs 
-    
-    #Sinon SI jun est egale a ciseaux
-    
-        #Si Bots est egale a pierre
-    
-            #Alors afficher le message "Tu a Perdu!", Bots, "écrase", jun
-    
-            #Atribuer 1 point a l'IA
-    
-        #Sinon
-    
-            #Alors afficher le message "Tu a Gagné!", jun, "coupe", Bots
-    
-            #Atribuer 1 point au joueurs 
-    
-    #Sinon
-    
-        #Alors Afficher un message d'erreur " tu t'est trompé"
-    
-    #Attribuer une option aléatoire à l'IA
-    
-    #affiché un message "tour suivant"
+continuer = True
+print("Mode Classique")
+#La boucle continue jusqu'à ce que la variable continuer est fausse
+while(continuer):
+    #Demander le choix 
+    print("Vous Choisisez :")
+    jun = input("pierre, papier, ciseaux? ou tapez FIN pour arrêter le jeu!\n")
+    if(jun == 'FIN'):
+        continuer = False
+    elif(jun == Bots):
+        print("Egalité!")
+    elif(jun == "pierre"):
+        if(Bots == "papier"):
+            print("Tu a Perdu!", Bots, "recouvre", jun)
+            PointsBots = PointsBots + 1 
+        else:
+            print("Tu a Gagné!", jun, "écrase", Bots)
+            Pointsjun = Pointsjun + 1
+    elif(jun == "papier"):
+        if(Bots == "ciseaux"):
+            print("Tu a Perdu!", Bots, "coupe", jun)
+            PointsBots = PointsBots + 1 
+        else:
+            print("Tu a Gagné!", jun, "recouvre", Bots)
+            Pointsjun = Pointsjun + 1
+    elif(jun == "ciseaux"):
+        if(Bots == "pierre"):
+            print("Tu a Perdu!", Bots, "écrase", jun)
+            PointsBots = PointsBots + 1
+        else:
+            print("Tu a Gagné!", jun, "coupe", Bots)
+            Pointsjun = Pointsjun + 1
+    else:
+        print("Votre choix n'est pas correct, vérifiez l'orthographe!")
+    Bots = Jia[randint(0,2)]
+    print('********Tour suivant********')
 
 #Afficher les points
-
-# affiché un message "Points"
-
-# affiché un message ""J1: ", Pointsjun"
-
-# affiché un message "IA: ", PointsBots"
-
+print("********Points********")
+print("J1: ", Pointsjun)
+print("IA: ", PointsBots)
